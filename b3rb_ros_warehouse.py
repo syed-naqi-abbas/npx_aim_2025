@@ -463,11 +463,11 @@ class WarehouseExplore(Node):
 				self.cancel_current_goal()
 			self.finding_qr_code = True
 			self.find_qr_code()
-		elif(sum(message.object_count)>=2):
-			if(not self.orienting_towards_shelf):
-				self.cancel_current_goal()
-			self.orienting_towards_shelf = True
-			self.orient_towards_shelf()
+		#elif(sum(message.object_count)>=2):
+		#	if(not self.orienting_towards_shelf):
+		#		self.cancel_current_goal()
+		#	self.orienting_towards_shelf = True
+		#	self.orient_towards_shelf()
 
 		if(message.qr_decoded!=''):
 			self.shelf_objects_curr.qr_decoded = message.qr_decoded
